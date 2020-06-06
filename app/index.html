@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>
+        Restaurant Manager
+    </title>
+</head>
+
+<body>
+<div id="app">
+    <h1 class="text-centered">Restaurant Manager</h1>
+    <h2 class="text-centered">Table Overview</h2>
+    <br>
+
+    <div class="restrant-wrapper">
+        <x-restaurant ref="restaurant"/>
+    </div>
+
+    <div class="new-party-wrapper">
+        <h3>New Party</h3>
+        <h4>Fill the following form to allocate a table to a party that is waiting to be seated.</h4>
+        <input v-model="num_people" placeholder="Number of People(non-zero positive integer)">
+        <input v-model="duration_statu" placeholder="Duration of stay in seconds(positive number)">
+        <input v-model="message" placeholder="Fuss message if evicted(text)">
+        <br>
+        <button v-on:click="save">Add</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="restaurant/table/TableComponent.js"></script>
+<script src="restaurant/RestaurantComponent.js"></script>
+<script src="app.js"></script>
+<script>
+
+
+
+</script>
+</body>
+
+</html>
